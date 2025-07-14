@@ -1,4 +1,4 @@
-﻿name: .NET Build and Test
+﻿name: .NET CI for NameSorter
 
 on:
   push:
@@ -7,13 +7,23 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-dotnet@v3
+    - name: 🔄 Checkout code
+      uses: actions/checkout@v3
+
+    - name: 🧰 Setup .NET
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.0.x'
-    - run: dotnet restore
-    - run: dotnet build --no-restore
-    - run: dotnet test --no-build --verbosity normal
+        dotnet-version: '7.0.x'  # Adjust if you're using a different SDK
+
+    - name: 📦 Restore dependencies
+      run: dotnet restore NameSorter/NameSorter.csproj
+
+    - name: 🛠️ Build solution
+      run: dotnet build NameSorter/NameSorter.csproj --no-restore --configuration Release
+
+    - name: 🧪 Run unit tests
+      run: dotnet test NameSorter.Tests/NameSorter.Tests.csproj --no-build --configuration Release --verbosity normal

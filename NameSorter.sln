@@ -6,6 +6,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NameSorter", "NameSorter\Na
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NameSorter.Tests", "NameSorter.Tests\NameSorter.Tests.csproj", "{22222222-2222-2222-2222-222222222222}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{0BE190AE-6BA1-4BED-BA8B-D38CA7A4983E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{913F2F56-1C31-497E-A304-2C7BB886AA0F}"
+	ProjectSection(SolutionItems) = preProject
+		NameSorter\.github\workflows\dotnet.yml = NameSorter\.github\workflows\dotnet.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,5 +30,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{913F2F56-1C31-497E-A304-2C7BB886AA0F} = {0BE190AE-6BA1-4BED-BA8B-D38CA7A4983E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86AE177F-1538-4139-BE75-F1ECFE2A84CB}
 	EndGlobalSection
 EndGlobal
