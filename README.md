@@ -27,4 +27,4 @@ dotnet test
 ### Run
 ```
 dotnet run --project NameSorter ./unsorted-names-list.txt
-```
+```"# Pipeline test at $(date)" 
