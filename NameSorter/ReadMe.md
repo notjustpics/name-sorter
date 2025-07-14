@@ -138,4 +138,4 @@ NameSorter.Tests/
 ReadMe.md
 
 ## Author
-Liz Smit
+Liz Smit --

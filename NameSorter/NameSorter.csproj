@@ -8,4 +8,7 @@
   <PropertyGroup>
     <StartArguments>unsorted-names-list.txt</StartArguments>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include=".github\workflows\dotnet.yml" />
+  </ItemGroup>
 </Project>
